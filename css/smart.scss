@@ -1,0 +1,293 @@
+@media screen and (max-width:480px) {
+    .inner{
+        width: 90vw;
+        margin: 0 auto;
+    }
+   a.read_more {
+        display: inline-block;
+        background-color: black;
+        color: #fff;
+        padding: 15px 40px;
+        border: 2px solid black;
+        transition-duration:.5s;
+        &:hover{
+            background-color: #fff;
+            color: black;
+        }
+    }
+    h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 800;
+        font-size: 2.8rem;
+        letter-spacing: 0.07em;
+        margin-bottom: 30px;
+    }
+    header {
+        .hamburger-menu {
+            display: block;
+            #menu-btn-check {
+                display: none;
+            }
+            #menu-btn-check:checked ~ .menu-content {
+                left: 0%;
+            }
+            .menu-btn {
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                display: flex;
+                height: 60px;
+                width: 60px;
+                justify-content: center;
+                align-items: center;
+                z-index: 90;
+                background-color: rgba(34,34 ,34, 0.95);
+                span,span::before,span::after{
+                    content: '';
+                    display: block;
+                    height: 3px;
+                    width: 25px;
+                    border-radius: 3px;
+                    background-color: #ffffff;
+                    position: absolute;
+                }
+                span::before{
+                    bottom: 8px;
+                }
+                span::after{
+                    top: 8px;
+                }
+            }
+            #menu-btn-check:checked ~ .menu-btn span {
+                background-color: rgba(255, 255, 255, 0);
+            }
+            #menu-btn-check:checked ~ .menu-btn span::before {
+                bottom: 0;
+                transform: rotate(45deg);
+            }
+            #menu-btn-check:checked ~ .menu-btn span::after {
+                top: 0;
+                transform: rotate(-45deg);
+            }
+            .menu-content {
+                width: 100vw;
+                height: 100%;
+                position: fixed;
+                top: 0;
+                left: 100%;
+                z-index: 80;
+                transition: all 0.5s;
+                display: block;
+                display: flex;
+                .menu-content-left{
+                    width: 0vw;
+                    background-color: rgba(34,34 ,34, 0.6);
+                }
+                .menu-content-right{
+                    width: 100vw;
+                    background-color: rgba(34,34 ,34, 0.95);
+                    
+                    ul{
+                        margin-top: 80px;
+                        text-align: center;
+                        li:nth-child(1){
+                            margin-bottom: 40px;
+                        }
+                        li{
+                            margin-bottom: 30px;
+                            a{
+                                font-family: 'Montserrat', sans-serif;
+                                color: #fff;
+                                font-weight: 600;
+                                font-size: 2.0rem;
+                                &:hover{
+                                    color:rgba(0,0,0,1) ;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                
+            }
+        }
+    }
+    section.kv {
+        position: relative;
+        color: #fff;
+        margin-bottom: 180px;
+        a{
+            position: absolute;
+            top: 20px;
+            left:15px;
+            img{
+                width: 180px;
+                height: auto;
+            }
+        }
+        div.kv-text{
+            position: absolute;
+            width: 230px;
+            top: 40%;
+            left: 55vw;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            h3 {
+                font-size: 1.6rem;
+                line-height: 1.5;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 800;
+                span{
+                    font-family: 'Montserrat', sans-serif;
+                }
+            }
+            p {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 600;
+                font-size: 5.6rem;
+            }
+        }
+        img {
+            width: 80vw;
+            height: 580px;
+            object-fit: cover;
+        }
+        .black{
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0 auto; 
+            z-index: -1;
+            width: 70vw;
+            height:calc(100% + 100px);
+            display: block;
+            background-color: #222222;
+        }
+    }
+    section.about {
+        background-image: url(/images/about-img.png);
+        padding: 20px 5vw;
+        div.inner {
+            img {
+                width: 100%;
+            }
+            div {
+                background-color: #FFFFFF;
+                opacity: 0.95;
+                width: 90vw;
+                padding: 40px 30px;
+              
+                p {
+                    line-height: 2;
+                    font-size: 1.6rem;
+                    /*font-family: ;*/
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    div.works_culture {
+        background-color: #F0F0F0;
+        padding: 40px 0;
+        div.inner {
+            section.works {
+                width: 100%;
+                margin-bottom: 40px;
+                img {
+                    width: 100%;
+                    margin-bottom: 30px;
+                }
+                p {
+                    font-size: 1.6rem;
+                    margin-bottom: 30px;
+                }
+            }
+            section.culture {
+                width: 100%;
+                img {
+                    width: 100%;
+                    margin-bottom: 30px;
+                }
+                p {
+                    font-size: 1.6rem;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    section.topics {
+        padding: 40px 0;
+        div.inner {
+            div {
+                ul {
+                    li {
+                        border-bottom: 1px solid #CECECE;
+                        margin-bottom: 30px;
+                        time{
+                            font-family: 'Montserrat', sans-serif;
+                            font-weight:500;
+                            font-size: 1.0rem;
+                            color: #CECECE;
+                            margin-bottom: 15px;
+                            display: block;
+                        }
+                        h3 {
+                            a {
+                                margin-bottom: 15px;
+                                display: block;
+                                font-size: 1.2rem;
+                                line-height: 1.8;
+                                font-weight: bold;
+                                &:hover{
+                                    opacity: 0.7;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            div.read_more_outer {
+                text-align:left;
+                a.read_more {
+                }
+            }
+        }
+    }
+    section.contact {
+        background-color: #F0F0F0;
+        div.inner {
+            padding: 40px 0;
+            img {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            div.contact-left {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                div.contact-left-inner{
+                    h2 {
+                    }
+                    p {
+                        line-height: 2.0;
+                        font-size: 1.6rem;
+                        margin-bottom: 30px;
+                    }
+                    a.read_more {
+                    }
+                }
+                
+            }
+        }
+    }
+    footer{
+        background-color: #525252;
+        color: #fff;
+        padding: 20px 0;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        font-size: 1.0rem;
+    }
+}
