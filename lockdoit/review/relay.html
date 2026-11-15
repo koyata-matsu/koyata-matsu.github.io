@@ -1,3 +1,3 @@
 <!DOCTYPE html><html><body>relay<script>
-fetch('paywall.png').then(r=>r.blob()).then(b=>{ if(window.opener){window.opener.postMessage({paywall:b},'https://appstoreconnect.apple.com');} document.body.textContent='sent '+b.size; setTimeout(()=>window.close(),1500);});
+fetch('paywall.png').then(r=>r.blob()).then(b=>{ const t=window.opener||(window.parent!==window?window.parent:null); if(t){t.postMessage({paywall:b},'https://appstoreconnect.apple.com');} document.body.textContent='sent '+b.size; });
 </script></body></html>
